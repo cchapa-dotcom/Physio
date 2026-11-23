@@ -1,11 +1,12 @@
 // Offline support: cache the app shell, and cache the pose model and its
 // runtime the first time they are fetched so the app works without signal
 // (on a plane, in a hotel with bad wifi, or at home with patchy internet).
-const CACHE = 'physio-v1';
+const CACHE = 'kine-v2';
 const SHELL = [
   './', 'index.html', 'styles.css', 'manifest.webmanifest', 'icons/icon.svg',
-  'src/app.js', 'src/coach.js', 'src/demo.js', 'src/draw.js', 'src/engine.js',
-  'src/exercises.js', 'src/geometry.js', 'src/landmarks.js', 'src/pose.js', 'src/storage.js',
+  'src/app.js', 'src/clinician.js', 'src/coach.js', 'src/demo.js', 'src/draw.js', 'src/engine.js',
+  'src/exercises.js', 'src/geometry.js', 'src/landmarks.js', 'src/pose.js', 'src/presets.js',
+  'src/program.js', 'src/session.js', 'src/storage.js', 'src/ui.js', 'src/lib/qrcode.mjs',
 ];
 
 self.addEventListener('install', (e) => {

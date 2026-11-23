@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0f766e">
-  <meta name="description" content="Your pocket physiotherapist. Watches your exercises through the camera and coaches your form, out loud.">
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="kine. — physio that sees you. Your physiotherapist prescribes, your phone's camera coaches every rep at home.">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Physio Coach</title>
+  <meta name="apple-mobile-web-app-title" content="kine">
+  <title>kine.</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/icon.svg">
@@ -15,29 +17,8 @@
 </head>
 <body>
   <main id="app" aria-live="polite"></main>
-
-  <!-- Live session view: kept in the page so the camera element persists. -->
-  <section id="session" class="session" hidden>
-    <div class="stage" id="stage">
-      <video id="video" playsinline muted></video>
-      <canvas id="overlay"></canvas>
-      <div class="hud-top">
-        <div class="counter" aria-label="Repetitions">
-          <span id="repCount">0</span><span class="of">/ <span id="repTarget">10</span></span>
-        </div>
-        <div class="ex-name" id="sessionName"></div>
-      </div>
-      <div class="rom" aria-hidden="true"><div class="rom-fill" id="romFill"></div></div>
-      <div class="center-msg" id="centerMsg" hidden></div>
-      <div class="feedback" id="feedback" role="status"></div>
-    </div>
-    <div class="controls">
-      <button class="btn ghost" id="pauseBtn" type="button">Pause</button>
-      <button class="btn danger" id="painBtn" type="button">Stop – it hurts</button>
-      <button class="btn primary" id="doneBtn" type="button">Done</button>
-    </div>
-  </section>
-
+  <nav id="tabbar" class="tabbar" aria-label="Main" hidden></nav>
+  <section id="session" class="session" hidden></section>
   <script type="module" src="src/app.js"></script>
 </body>
 </html>

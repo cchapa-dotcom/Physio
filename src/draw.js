@@ -2,8 +2,8 @@
 // form fault are drawn in amber so the person can see what to fix.
 import { BONES, SIDE_INDEX, LM } from './landmarks.js';
 
-const OK = '#34d399';
-const BAD = '#fbbf24';
+const OK = '#d4ff3d';
+const BAD = '#ffb340';
 
 function faultIndices(joints) {
   const set = new Set();
